@@ -88,7 +88,7 @@ python3 -m http.server 8000
 
 **Result:** ✅ Admin JWT token captured
 
-![XSS Cookie Capture](Screenshots/03_cookie_capture.png)
+![XSS Cookie Capture](Screenshots/cookie_capture.png)
 
 ---
 
@@ -100,7 +100,7 @@ python3 -m http.server 8000
 
 **Result:** ✅ Administrative access achieved
 
-![Admin Access](Screenshots/04_admin_access.png)
+![Admin Access](Screenshots/admin_access.png)
 
 ---
 
@@ -119,8 +119,6 @@ sqlmap -u "http://10.10.x.x/admin?user=1" \
 
 **Result:** ✅ 4 user password hashes extracted
 
-![SQLMap Execution](Screenshots/06_sqlmap_execution.png)
-
 ---
 
 ### Phase 5: Password Cracking
@@ -138,8 +136,6 @@ john --wordlist=/usr/share/wordlists/rockyou.txt hashes.txt --format=bcrypt
 
 **Result:** ✅ SSH credentials obtained
 
-![Hash Cracking](Screenshots/07_hash_cracking.png)
-
 ---
 
 ### Phase 6: SSH Access
@@ -154,7 +150,7 @@ cat ~/user.txt
 
 **Result:** ✅ User-level access achieved
 
-![SSH Access](Screenshots/08_ssh_access.png)
+![SSH Access](Screenshots/ssh_access.png)
 
 ---
 
@@ -177,7 +173,7 @@ cat /root/root.txt
 
 **Result:** ✅ Root access achieved
 
-![Docker Escape](Screenshots/09_docker_escape.png)
+![Docker Escape](Screenshots/docker_escape.png)
 
 ---
 
@@ -192,7 +188,6 @@ All evidence collected with proper chain of custody:
 | database_dump.sql | 1f2e3d4c...1807 | 2025-01-09 |
 | escalation_log.txt | 9e8d7c6b...9e8 | 2025-01-09 |
 
-See `Evidence/evidence_hashes.txt` for complete hash values.
 
 ---
 
@@ -242,7 +237,7 @@ See `Evidence/evidence_hashes.txt` for complete hash values.
 
 ## 📄 Documentation
 
-**Complete Report:** [Week3_Advanced_VAPT_Exercise_XSS_to_RCE.pdf](Documentation/Week3_Advanced_VAPT_Exercise_XSS_to_RCE.pdf)
+**Complete Report:**
 
 The full PDF report contains:
 - Executive summary for management
